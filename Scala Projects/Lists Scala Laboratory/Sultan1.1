@@ -1,0 +1,7 @@
+def flatten[A](xss: List[List[A]]): List[A] = {
+  if(xss == Nil)
+    return List()
+   return xss.head ::: flatten(xss.tail)
+}
+
+flatten(List(List("a", 2, 3), List(4, 5, 6), List(1, 2, 3)))

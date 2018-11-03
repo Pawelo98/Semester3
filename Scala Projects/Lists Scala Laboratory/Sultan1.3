@@ -1,0 +1,7 @@
+def replicate[A](x: A, n: Int): List[A] = {
+	if(n<=0)
+		return List()
+	return x :: replicate(x, n-1)
+}
+
+replicate("ha", 3)

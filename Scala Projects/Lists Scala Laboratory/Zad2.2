@@ -1,0 +1,11 @@
+def podzielPon[A](lista : List[A], n : Int) = {
+	def helper(lista1 : List[A], wynik1 : List[A], wynik2 : List[A], n : Int, idx : Int) : (List[A], List[A]) =
+		(lista1, n) match {
+		case(Nil,_)=>(wynik1.reverse, wynik2.reverse)
+		case(h::t,0)=> helper(t, wynik1, h::wynik2, n, idx)
+		case(h::t,n)=> helper(t, h::wynik1, wynik2, n-1, idx)
+		}
+	helper(lista, Nil, Nil, n, 0)
+}
+
+podzielPon (List(1,3,5,7,9), 5)

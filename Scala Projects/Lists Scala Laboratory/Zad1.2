@@ -1,0 +1,7 @@
+def getN [A] (xss: List[A], n: Int) : A = {
+	if(xss==Nil) throw new Exception ("niepoprawny argument")
+	else if(n==0) xss.head
+	else getN(xss.tail, n-1)
+}
+
+getN (List(0,1,2,3,4), 3);;

@@ -1,0 +1,7 @@
+def pairChange [A] (xss : List[A]) : List[A] = {
+	if(xss==Nil) List()
+	else if(xss.tail==Nil) xss.head :: pairChange(xss.tail)
+	else xss.tail.head :: xss.head :: pairChange(xss.tail.tail)
+}
+
+pairChange (List(0,1,2,3,4));;
