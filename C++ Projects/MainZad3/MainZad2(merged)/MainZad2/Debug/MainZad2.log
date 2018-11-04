@@ -1,31 +1,31 @@
 ﻿  pch.cpp
   CCommand.cpp
   CCommFun.cpp
-c:\users\pawlik\source\repos\mainzad3\mainzad2(merged)\mainzad2\ctable.h(21): warning C4005: "WRONG_INDEX": ponowna definicja makra
-  c:\users\pawlik\source\repos\mainzad3\mainzad2(merged)\mainzad2\ctable.h(6): note: zobacz poprzednią definicję „WRONG_INDEX”
+c:\users\pawlik\desktop\semester3-master\c++ projects\mainzad3\mainzad2(merged)\mainzad2\ctable.h(21): warning C4005: "WRONG_INDEX": ponowna definicja makra
+  c:\users\pawlik\desktop\semester3-master\c++ projects\mainzad3\mainzad2(merged)\mainzad2\ctable.h(6): note: zobacz poprzednią definicję „WRONG_INDEX”
   CCommInternet.cpp
   CMenu.cpp
-c:\users\pawlik\source\repos\mainzad3\mainzad2(merged)\mainzad2\cmenu.cpp(17): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
-c:\users\pawlik\source\repos\mainzad3\mainzad2(merged)\mainzad2\cmenu.cpp(29): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
-c:\users\pawlik\source\repos\mainzad3\mainzad2(merged)\mainzad2\cmenu.cpp(41): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
-c:\users\pawlik\source\repos\mainzad3\mainzad2(merged)\mainzad2\cmenu.cpp(65): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
-c:\users\pawlik\source\repos\mainzad3\mainzad2(merged)\mainzad2\cmenu.cpp(73): warning C4018: ">=": niezgodność typu ze znakiem/bez znaku
-c:\users\pawlik\source\repos\mainzad3\mainzad2(merged)\mainzad2\cmenu.cpp(81): warning C4018: ">=": niezgodność typu ze znakiem/bez znaku
-c:\users\pawlik\source\repos\mainzad3\mainzad2(merged)\mainzad2\cmenu.cpp(86): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+c:\users\pawlik\desktop\semester3-master\c++ projects\mainzad3\mainzad2(merged)\mainzad2\cmenu.cpp(17): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+c:\users\pawlik\desktop\semester3-master\c++ projects\mainzad3\mainzad2(merged)\mainzad2\cmenu.cpp(29): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+c:\users\pawlik\desktop\semester3-master\c++ projects\mainzad3\mainzad2(merged)\mainzad2\cmenu.cpp(41): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+c:\users\pawlik\desktop\semester3-master\c++ projects\mainzad3\mainzad2(merged)\mainzad2\cmenu.cpp(65): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+c:\users\pawlik\desktop\semester3-master\c++ projects\mainzad3\mainzad2(merged)\mainzad2\cmenu.cpp(73): warning C4018: ">=": niezgodność typu ze znakiem/bez znaku
+c:\users\pawlik\desktop\semester3-master\c++ projects\mainzad3\mainzad2(merged)\mainzad2\cmenu.cpp(81): warning C4018: ">=": niezgodność typu ze znakiem/bez znaku
+c:\users\pawlik\desktop\semester3-master\c++ projects\mainzad3\mainzad2(merged)\mainzad2\cmenu.cpp(86): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
   CMenuCommand.cpp
   CMenuItem.cpp
   CTable.cpp
-c:\users\pawlik\source\repos\mainzad3\mainzad2(merged)\mainzad2\ctable.h(21): warning C4005: "WRONG_INDEX": ponowna definicja makra
-  c:\users\pawlik\source\repos\mainzad3\mainzad2(merged)\mainzad2\ctable.h(6): note: zobacz poprzednią definicję „WRONG_INDEX”
+c:\users\pawlik\desktop\semester3-master\c++ projects\mainzad3\mainzad2(merged)\mainzad2\ctable.h(21): warning C4005: "WRONG_INDEX": ponowna definicja makra
+  c:\users\pawlik\desktop\semester3-master\c++ projects\mainzad3\mainzad2(merged)\mainzad2\ctable.h(6): note: zobacz poprzednią definicję „WRONG_INDEX”
   CMainImpl.cpp
-c:\users\pawlik\source\repos\mainzad3\mainzad2(merged)\mainzad2\ctable.h(21): warning C4005: "WRONG_INDEX": ponowna definicja makra
-  c:\users\pawlik\source\repos\mainzad3\mainzad2(merged)\mainzad2\ctable.h(6): note: zobacz poprzednią definicję „WRONG_INDEX”
-c:\users\pawlik\source\repos\mainzad3\mainzad2(merged)\mainzad2\cmainimpl.cpp(40): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
-c:\users\pawlik\source\repos\mainzad3\mainzad2(merged)\mainzad2\cmainimpl.cpp(190): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+c:\users\pawlik\desktop\semester3-master\c++ projects\mainzad3\mainzad2(merged)\mainzad2\ctable.h(21): warning C4005: "WRONG_INDEX": ponowna definicja makra
+  c:\users\pawlik\desktop\semester3-master\c++ projects\mainzad3\mainzad2(merged)\mainzad2\ctable.h(6): note: zobacz poprzednią definicję „WRONG_INDEX”
+c:\users\pawlik\desktop\semester3-master\c++ projects\mainzad3\mainzad2(merged)\mainzad2\cmainimpl.cpp(40): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+c:\users\pawlik\desktop\semester3-master\c++ projects\mainzad3\mainzad2(merged)\mainzad2\cmainimpl.cpp(190): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
   CMainZad2.cpp
-c:\users\pawlik\source\repos\mainzad3\mainzad2(merged)\mainzad2\ctable.h(21): warning C4005: "WRONG_INDEX": ponowna definicja makra
-  c:\users\pawlik\source\repos\mainzad3\mainzad2(merged)\mainzad2\ctable.h(6): note: zobacz poprzednią definicję „WRONG_INDEX”
-c:\users\pawlik\source\repos\mainzad3\mainzad2(merged)\mainzad2\cmenucommand.h(7): warning C4005: "EMPTY_STRING": ponowna definicja makra
-  c:\users\pawlik\source\repos\mainzad3\mainzad2(merged)\mainzad2\ctable.h(26): note: zobacz poprzednią definicję „EMPTY_STRING”
+c:\users\pawlik\desktop\semester3-master\c++ projects\mainzad3\mainzad2(merged)\mainzad2\ctable.h(21): warning C4005: "WRONG_INDEX": ponowna definicja makra
+  c:\users\pawlik\desktop\semester3-master\c++ projects\mainzad3\mainzad2(merged)\mainzad2\ctable.h(6): note: zobacz poprzednią definicję „WRONG_INDEX”
+c:\users\pawlik\desktop\semester3-master\c++ projects\mainzad3\mainzad2(merged)\mainzad2\cmenucommand.h(7): warning C4005: "EMPTY_STRING": ponowna definicja makra
+  c:\users\pawlik\desktop\semester3-master\c++ projects\mainzad3\mainzad2(merged)\mainzad2\ctable.h(26): note: zobacz poprzednią definicję „EMPTY_STRING”
   Generowanie kodu...
-  MainZad2.vcxproj -> C:\Users\Pawlik\source\repos\MainZad3\MainZad2(merged)\Debug\MainZad2.exe
+  MainZad2.vcxproj -> C:\Users\Pawlik\Desktop\Semester3-master\C++ Projects\MainZad3\MainZad2(merged)\Debug\MainZad2.exe
