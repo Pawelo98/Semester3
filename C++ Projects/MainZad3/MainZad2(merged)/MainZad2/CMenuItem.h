@@ -15,6 +15,7 @@ public:
 	virtual  ~CMenuItem();
 
 	virtual int iRun() = 0;
+	virtual int iHelp() = 0;
 	string sGetName();
 	string sGetCommand();
 };

@@ -17,3 +17,8 @@ void CCommand::RunCommand()
 {
 	cout << DEFAULT_STRING << endl;
 }// void CCommand::RunCommand()
+
+void CCommand::vHelpCommand()
+{
+	cout << EMPTY_QUOTE << endl;
+}

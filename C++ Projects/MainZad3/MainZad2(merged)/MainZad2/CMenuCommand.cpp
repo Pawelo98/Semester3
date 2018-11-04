@@ -25,3 +25,15 @@ int CMenuCommand::iRun()
 		c_command->RunCommand();
 	return 0;
 }// int CMenuCommand::iRun()
+
+int CMenuCommand::iHelp()
+{
+	if (c_command == NULL)
+	{
+		cout << EMPTY_QUOTE << endl;
+		return 0;
+	}// if (c_command == NULL)
+	else
+		c_command->vHelpCommand();
+	return 0;
+}

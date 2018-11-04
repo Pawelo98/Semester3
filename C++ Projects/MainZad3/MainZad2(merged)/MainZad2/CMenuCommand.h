@@ -5,6 +5,7 @@
 #include <vector>
 #define DELETE_COMM "deleted command"
 #define EMPTY_STRING "Empty command"
+#define EMPTY_QUOTE "No command"
 
 using namespace std;
 
@@ -16,4 +17,5 @@ public:
 	CMenuCommand(string sName, string sCommand, CCommand* cc);
 	~CMenuCommand();
 	int iRun();
+	int iHelp();
 };

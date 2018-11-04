@@ -7,10 +7,15 @@
 #define WHAT_BROWSER "chrome.exe"
 #define ACTION "open"
 #define CONTINUE_PROMPT "Nacisnij dowolny przycisk zeby program kontynuowal dzialanie"
+#define INTERNET_HELP "Otwiera przegladarke internetowa chrome"
 
 using namespace std;
 
 class CCommInternet : public CCommand {
 public:
 	void RunCommand();
+	void vHelpCommand()
+	{
+		cout << INTERNET_HELP << endl;
+	}
 };

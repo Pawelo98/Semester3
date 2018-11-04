@@ -46,6 +46,12 @@ int CMenu::iRun()
 					cout << endl;
 					b_exist = true;
 				}// if (v_menuItems[i]->sGetCommand() == s_prompt)
+				if ("help " + v_menu_items[i]->sGetCommand() == s_prompt)
+				{
+					v_menu_items[i]->iHelp();
+					cout << endl;
+					b_exist = true;
+				}// if (v_menuItems[i]->sGetCommand() == s_prompt)
 			}// for (int i = 0; i < v_menuItems.size(); i++)
 			if (s_prompt == GO_BACK)
 			{
