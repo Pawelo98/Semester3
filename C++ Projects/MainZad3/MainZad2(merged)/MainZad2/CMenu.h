@@ -11,6 +11,8 @@
 #define EMPTY_STRING ""
 #define NO_COMMAND "No command"
 #define NO_ITEM_TO_SEARCH "No item to search"
+#define HELP_COMMAND "help "
+#define SEARCH_COMMAND "search "
 
 using namespace std;
 
@@ -29,7 +31,7 @@ public:
 		cout << NO_COMMAND << endl;
 		return 0;
 	}
-	void vSearch(CMenuItem*);
+	void vSearch(CMenu*);
 	void vSetRoot() { root = true; }
 	void vAddItem(CMenuItem* cItem);
 	CMenuItem* GetItem(int iIndex);

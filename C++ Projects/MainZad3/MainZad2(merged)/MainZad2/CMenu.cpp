@@ -6,12 +6,12 @@ using namespace std;
 
 CMenu::CMenu(string sName, string sCommand) : CMenuItem(sName, sCommand)
 {
+	i_id = 1;
 	system("cls");
 }// CMenu::CMenu(string name, string command) : CMenuItem(name, command)
 
 CMenu::~CMenu()
 {
-
 	cout << DELETE_MENU << endl;
 	
 	for (int i = 0; i < v_menu_items.size(); i++)
@@ -43,25 +43,23 @@ int CMenu::iRun()
 				if (v_menu_items[i]->sGetCommand() == s_prompt)
 				{
 					v_menu_items[i]->iRun();
-					cout << endl;
 					b_exist = true;
 				}// if (v_menuItems[i]->sGetCommand() == s_prompt)
-				if ("help " + v_menu_items[i]->sGetCommand() == s_prompt)
+				if (HELP_COMMAND + v_menu_items[i]->sGetCommand() == s_prompt)
 				{
 					v_menu_items[i]->iHelp();
-					cout << endl;
 					b_exist = true;
 				}// if ("help " + v_menuItems[i]->sGetCommand() == s_prompt)
 				if (root)
 				{
-					if ("search " + v_menu_items[i]->sGetCommand() == s_prompt)
+					if (SEARCH_COMMAND + v_menu_items[i]->sGetCommand() == s_prompt)
 					{
 						vSearch(this);
-						cout << endl;
 						b_exist = true;
 					}// if ("search " + v_menuItems[i]->sGetCommand() == s_prompt)
 				}
 			}// for (int i = 0; i < v_menuItems.size(); i++)
+			cout << endl;
 			if (s_prompt == GO_BACK)
 			{
 				return 0;
@@ -83,14 +81,18 @@ void CMenu::vAddItem(CMenuItem* cItem)
 	if(!bExist) v_menu_items.push_back(cItem);
 }// void CMenu::vAddItem(CMenuItem * item)
 
-void CMenu::vSearch(CMenuItem* elem)
+void CMenu::vSearch(CMenu* elem)
 {
-	cout << elem->sGetName() + " -> ";
-	for (int i = 0; i < v_menu_items.size(); i++)
+	cout << elem->sGetName() + " -> " << endl;
+	for (int i = 0; i < (*elem).v_menu_items.size(); i++)
 	{
-		vSearch(v_menu_items[i]);
-	}
-}
+		cout << (*elem).v_menu_items[i]->sGetName() << endl;
+		if ((*elem).v_menu_items[i]->iGetId() == 1)
+		{
+			vSearch((CMenu*)(*elem).v_menu_items[i]);
+		}// if ((*elem).v_menu_items[i]->getId() == 1)
+	}// for (int i = 0; i < (*elem).v_menu_items.size(); i++)
+}// void CMenu::vSearch(CMenu* elem)
 
 CMenuItem* CMenu::GetItem(int iIndex)
 {

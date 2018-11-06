@@ -7,6 +7,7 @@ using namespace std;
 class CMenuItem
 {
 protected:
+	int i_id;
 	string s_command;
 	string s_name;
 public:
@@ -16,6 +17,7 @@ public:
 
 	virtual int iRun() = 0;
 	virtual int iHelp() = 0;
+	int iGetId();
 	string sGetName();
 	string sGetCommand();
 };
