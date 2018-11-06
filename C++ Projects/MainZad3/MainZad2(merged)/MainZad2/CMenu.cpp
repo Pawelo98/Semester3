@@ -51,7 +51,16 @@ int CMenu::iRun()
 					v_menu_items[i]->iHelp();
 					cout << endl;
 					b_exist = true;
-				}// if (v_menuItems[i]->sGetCommand() == s_prompt)
+				}// if ("help " + v_menuItems[i]->sGetCommand() == s_prompt)
+				if (root)
+				{
+					if ("search " + v_menu_items[i]->sGetCommand() == s_prompt)
+					{
+						vSearch(this);
+						cout << endl;
+						b_exist = true;
+					}// if ("search " + v_menuItems[i]->sGetCommand() == s_prompt)
+				}
 			}// for (int i = 0; i < v_menuItems.size(); i++)
 			if (s_prompt == GO_BACK)
 			{
@@ -65,7 +74,7 @@ int CMenu::iRun()
 	}// while (!b_end)
 }// int CMenu::iRun()
 
-void CMenu::vAddItem(CMenuItem * cItem)
+void CMenu::vAddItem(CMenuItem* cItem)
 {
 	bool bExist = false;
 	for (int i = 0; i < v_menu_items.size(); i++)
@@ -73,6 +82,15 @@ void CMenu::vAddItem(CMenuItem * cItem)
 			bExist = true;
 	if(!bExist) v_menu_items.push_back(cItem);
 }// void CMenu::vAddItem(CMenuItem * item)
+
+void CMenu::vSearch(CMenuItem* elem)
+{
+	cout << elem->sGetName() + " -> ";
+	for (int i = 0; i < v_menu_items.size(); i++)
+	{
+		vSearch(v_menu_items[i]);
+	}
+}
 
 CMenuItem* CMenu::GetItem(int iIndex)
 {
