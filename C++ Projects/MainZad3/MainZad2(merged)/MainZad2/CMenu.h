@@ -31,6 +31,7 @@ public:
 		cout << NO_COMMAND << endl;
 		return 0;
 	}
+	void vSearch(string sCommand, string sPath);
 	void vSearch(CMenu*);
 	void vSetRoot() { root = true; }
 	void vAddItem(CMenuItem* cItem);

@@ -37,3 +37,11 @@ int CMenuCommand::iHelp()
 		c_command->vHelpCommand();
 	return 0;
 }
+
+void CMenuCommand::vSearch(string sCommand, string sPath)
+{
+	if (sCommand == s_command)
+	{
+		cout << sPath + s_command << endl;
+	}// if (command == s_command)
+}// void CMenuCommand::vSearch(string sCommand, string sPath)

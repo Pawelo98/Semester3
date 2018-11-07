@@ -16,6 +16,8 @@ private:
 public:
 	CMenuCommand(string sName, string sCommand, CCommand* cc);
 	~CMenuCommand();
+
+	void vSearch(string sCommand, string sPath);
 	int iRun();
 	int iHelp();
 };

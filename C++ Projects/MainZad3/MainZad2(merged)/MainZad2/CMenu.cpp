@@ -38,6 +38,16 @@ int CMenu::iRun()
 		{
 			bool b_exist = false;
 
+			if (SEARCH_COMMAND == s_prompt.substr(0, 7))
+			{
+		/*		if (root)
+				{ */
+					vSearch(s_prompt.substr(7, s_prompt.size() - 6), EMPTY_STRING);
+					b_exist = true;
+		/*		}// if (root)
+				else return 0;*/
+			}// if ("search " + v_menuItems[i]->sGetCommand() == s_prompt)
+
 			for (int i = 0; i < v_menu_items.size(); i++)
 			{
 				if (v_menu_items[i]->sGetCommand() == s_prompt)
@@ -50,14 +60,6 @@ int CMenu::iRun()
 					v_menu_items[i]->iHelp();
 					b_exist = true;
 				}// if ("help " + v_menuItems[i]->sGetCommand() == s_prompt)
-				if (root)
-				{
-					if (SEARCH_COMMAND + v_menu_items[i]->sGetCommand() == s_prompt)
-					{
-						vSearch(this);
-						b_exist = true;
-					}// if ("search " + v_menuItems[i]->sGetCommand() == s_prompt)
-				}
 			}// for (int i = 0; i < v_menuItems.size(); i++)
 			cout << endl;
 			if (s_prompt == GO_BACK)
@@ -80,7 +82,7 @@ void CMenu::vAddItem(CMenuItem* cItem)
 			bExist = true;
 	if(!bExist) v_menu_items.push_back(cItem);
 }// void CMenu::vAddItem(CMenuItem * item)
-
+/*
 void CMenu::vSearch(CMenu* elem)
 {
 	cout << elem->sGetName() + " -> " << endl;
@@ -92,7 +94,7 @@ void CMenu::vSearch(CMenu* elem)
 			vSearch((CMenu*)(*elem).v_menu_items[i]);
 		}// if ((*elem).v_menu_items[i]->getId() == 1)
 	}// for (int i = 0; i < (*elem).v_menu_items.size(); i++)
-}// void CMenu::vSearch(CMenu* elem)
+}// void CMenu::vSearch(CMenu* elem) */
 
 CMenuItem* CMenu::GetItem(int iIndex)
 {
@@ -114,3 +116,18 @@ void CMenu::vDeleteItem(int iIndex)
 		v_menu_items.pop_back();
 	}// if (bInside)
 }// void CMenu::vDeleteItem(int nr)
+
+void CMenu::vSearch(string sCommand, string sPath)
+{
+	if (sCommand == s_command) 
+	{
+		cout << sPath + s_command << endl;
+	}// if (sCommand == s_command)
+	sPath.append(s_command + "->");
+
+	for (int i = 0; i < v_menu_items.size(); i++)
+	{
+		v_menu_items.at(i)->vSearch(sCommand, sPath);
+
+	}// for (int i = 0; i < v_menu_items.size(); i++)
+}// void CMenu::vSearch(string sCommand, string sPath)

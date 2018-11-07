@@ -18,9 +18,10 @@ CMenuItem::~CMenuItem()
 	cout << DELETE_ITEM << endl;
 }// CMenuItem::~CMenuItem()
 
-int CMenuItem::iGetId() {
+int CMenuItem::iGetId()
+{
 	return i_id;
-}
+}// int CMenuItem::iGetId()
 
 string CMenuItem::sGetName()
 {
@@ -31,3 +32,7 @@ string CMenuItem::sGetCommand()
 {
 	return s_command;
 }// string CMenuItem::sGetCommand()
+
+void CMenuItem::vSearch(string sCommand, string sPath)
+{
+}
