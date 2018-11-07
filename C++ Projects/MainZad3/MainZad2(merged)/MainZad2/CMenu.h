@@ -20,6 +20,7 @@ class CMenu : public CMenuItem
 {
 private:
 	bool root = false;
+	CMenu *parent;
 	vector<CMenuItem*> v_menu_items;
 public:
 	CMenu(string sName, string sCommand);
@@ -31,6 +32,9 @@ public:
 		cout << NO_COMMAND << endl;
 		return 0;
 	}
+	CMenu* getParent();
+	void setParent(CMenu *par);
+	CMenu* findMain();
 	void vSearch(string sCommand, string sPath);
 	void vSearch(CMenu*);
 	void vSetRoot() { root = true; }

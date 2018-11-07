@@ -40,12 +40,9 @@ int CMenu::iRun()
 
 			if (SEARCH_COMMAND == s_prompt.substr(0, 7))
 			{
-		/*		if (root)
-				{ */
-					vSearch(s_prompt.substr(7, s_prompt.size() - 6), EMPTY_STRING);
-					b_exist = true;
-		/*		}// if (root)
-				else return 0;*/
+				CMenu *main = findMain();
+				main->vSearch(s_prompt.substr(7, s_prompt.size() - 6), EMPTY_STRING);
+				b_exist = true;
 			}// if ("search " + v_menuItems[i]->sGetCommand() == s_prompt)
 
 			for (int i = 0; i < v_menu_items.size(); i++)
@@ -76,25 +73,47 @@ int CMenu::iRun()
 
 void CMenu::vAddItem(CMenuItem* cItem)
 {
+	CMenu *newMenu;
+	newMenu = dynamic_cast<CMenu*>(cItem);
+	if (newMenu)
+	{
+		newMenu->setParent(this);
+	}
 	bool bExist = false;
 	for (int i = 0; i < v_menu_items.size(); i++)
 		if (v_menu_items[i] == cItem || v_menu_items[i]->sGetCommand() == cItem->sGetCommand())
 			bExist = true;
 	if(!bExist) v_menu_items.push_back(cItem);
 }// void CMenu::vAddItem(CMenuItem * item)
-/*
-void CMenu::vSearch(CMenu* elem)
+
+CMenu* CMenu::getParent() 
 {
-	cout << elem->sGetName() + " -> " << endl;
-	for (int i = 0; i < (*elem).v_menu_items.size(); i++)
+	return parent;
+}// CMenu* CMenu::getParent() 
+
+void CMenu::setParent(CMenu *par)
+{
+	this->parent = par;
+}// void CMenu::setParent(CMenu *par)
+
+CMenu* CMenu::findMain()
+{
+	CMenu *main = parent;
+
+	if (!(main == NULL))
 	{
-		cout << (*elem).v_menu_items[i]->sGetName() << endl;
-		if ((*elem).v_menu_items[i]->iGetId() == 1)
+		while ((*main).getParent())
 		{
-			vSearch((CMenu*)(*elem).v_menu_items[i]);
-		}// if ((*elem).v_menu_items[i]->getId() == 1)
-	}// for (int i = 0; i < (*elem).v_menu_items.size(); i++)
-}// void CMenu::vSearch(CMenu* elem) */
+			main = (*main).getParent();
+		}// while ((*main).getParent())
+	}// if (main)
+	else
+	{
+		main = this;
+	}//jesli parent jest nullem na wejsciu to zmajdujemy sie w mainie
+
+	return main;
+}// CMenu* CMenu::findMain()
 
 CMenuItem* CMenu::GetItem(int iIndex)
 {

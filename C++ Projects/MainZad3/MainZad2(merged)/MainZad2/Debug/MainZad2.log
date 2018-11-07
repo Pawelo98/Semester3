@@ -1,10 +1,16 @@
-﻿  CMenu.cpp
+﻿  CMainZad2.cpp
+c:\users\pawlik\desktop\semester3-master\c++ projects\mainzad3\mainzad2(merged)\mainzad2\ctable.h(21): warning C4005: "WRONG_INDEX": ponowna definicja makra
+  c:\users\pawlik\desktop\semester3-master\c++ projects\mainzad3\mainzad2(merged)\mainzad2\ctable.h(6): note: zobacz poprzednią definicję „WRONG_INDEX”
+c:\users\pawlik\desktop\semester3-master\c++ projects\mainzad3\mainzad2(merged)\mainzad2\cmenucommand.h(7): warning C4005: "EMPTY_STRING": ponowna definicja makra
+  c:\users\pawlik\desktop\semester3-master\c++ projects\mainzad3\mainzad2(merged)\mainzad2\ctable.h(26): note: zobacz poprzednią definicję „EMPTY_STRING”
+  CMenu.cpp
 c:\users\pawlik\desktop\semester3-master\c++ projects\mainzad3\mainzad2(merged)\mainzad2\cmenu.cpp(17): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
 c:\users\pawlik\desktop\semester3-master\c++ projects\mainzad3\mainzad2(merged)\mainzad2\cmenu.cpp(29): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
-c:\users\pawlik\desktop\semester3-master\c++ projects\mainzad3\mainzad2(merged)\mainzad2\cmenu.cpp(51): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
-c:\users\pawlik\desktop\semester3-master\c++ projects\mainzad3\mainzad2(merged)\mainzad2\cmenu.cpp(80): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
-c:\users\pawlik\desktop\semester3-master\c++ projects\mainzad3\mainzad2(merged)\mainzad2\cmenu.cpp(101): warning C4018: ">=": niezgodność typu ze znakiem/bez znaku
-c:\users\pawlik\desktop\semester3-master\c++ projects\mainzad3\mainzad2(merged)\mainzad2\cmenu.cpp(109): warning C4018: ">=": niezgodność typu ze znakiem/bez znaku
-c:\users\pawlik\desktop\semester3-master\c++ projects\mainzad3\mainzad2(merged)\mainzad2\cmenu.cpp(114): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
-c:\users\pawlik\desktop\semester3-master\c++ projects\mainzad3\mainzad2(merged)\mainzad2\cmenu.cpp(128): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+c:\users\pawlik\desktop\semester3-master\c++ projects\mainzad3\mainzad2(merged)\mainzad2\cmenu.cpp(48): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+c:\users\pawlik\desktop\semester3-master\c++ projects\mainzad3\mainzad2(merged)\mainzad2\cmenu.cpp(83): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+c:\users\pawlik\desktop\semester3-master\c++ projects\mainzad3\mainzad2(merged)\mainzad2\cmenu.cpp(120): warning C4018: ">=": niezgodność typu ze znakiem/bez znaku
+c:\users\pawlik\desktop\semester3-master\c++ projects\mainzad3\mainzad2(merged)\mainzad2\cmenu.cpp(128): warning C4018: ">=": niezgodność typu ze znakiem/bez znaku
+c:\users\pawlik\desktop\semester3-master\c++ projects\mainzad3\mainzad2(merged)\mainzad2\cmenu.cpp(133): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+c:\users\pawlik\desktop\semester3-master\c++ projects\mainzad3\mainzad2(merged)\mainzad2\cmenu.cpp(147): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+  Generowanie kodu...
   MainZad2.vcxproj -> C:\Users\Pawlik\Desktop\Semester3-master\C++ Projects\MainZad3\MainZad2(merged)\Debug\MainZad2.exe
