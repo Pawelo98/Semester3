@@ -11,4 +11,4 @@ void CCommInternet::RunCommand()
 	ShellExecuteA(0, ACTION, WHAT_BROWSER, GOOGLE_ADRESS, 0, SW_MAXIMIZE);
 	cout << CONTINUE_PROMPT << endl;
 	getchar();
-}
+}// void CCommInternet::RunCommand()

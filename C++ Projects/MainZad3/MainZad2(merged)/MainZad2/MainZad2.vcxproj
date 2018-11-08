@@ -158,6 +158,7 @@
     <ClInclude Include="CMenu.h" />
     <ClInclude Include="CMenuCommand.h" />
     <ClInclude Include="CMenuItem.h" />
+    <ClInclude Include="CMenuToString.h" />
     <ClInclude Include="CTable.h" />
     <ClInclude Include="CMainHeader.h" />
     <ClInclude Include="CCommAla.h" />
@@ -170,6 +171,7 @@
     <ClCompile Include="CMenu.cpp" />
     <ClCompile Include="CMenuCommand.cpp" />
     <ClCompile Include="CMenuItem.cpp" />
+    <ClCompile Include="CMenuToString.cpp" />
     <ClCompile Include="CTable.cpp" />
     <ClCompile Include="CMainImpl.cpp" />
     <ClCompile Include="CMainZad2.cpp" />

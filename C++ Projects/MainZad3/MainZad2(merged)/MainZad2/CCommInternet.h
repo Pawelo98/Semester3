@@ -8,14 +8,13 @@
 #define ACTION "open"
 #define CONTINUE_PROMPT "Nacisnij dowolny przycisk zeby program kontynuowal dzialanie"
 #define INTERNET_HELP "Otwiera przegladarke internetowa chrome"
+#define INTERNET_OPEN "Uruchom przegladarke"
+#define INTERNET_TEXT "internet"
 
 using namespace std;
 
 class CCommInternet : public CCommand {
 public:
 	void RunCommand();
-	void vHelpCommand()
-	{
-		cout << INTERNET_HELP << endl;
-	}
+	void vHelpCommand()	{ cout << INTERNET_HELP << endl; }
 };

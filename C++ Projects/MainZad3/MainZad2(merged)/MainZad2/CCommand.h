@@ -1,6 +1,7 @@
 #pragma once
-#define DEFAULT_STRING "Default command "
+#define DEFAULT_STRING "Default command"
 #define EMPTY_QUOTE "No command"
+#include <string>
 
 class CCommand
 {
@@ -9,6 +10,6 @@ public:
 	~CCommand();
 
 	virtual void RunCommand();
-	virtual void vHelpCommand();
+	virtual void vHelpCommand() {};
 };
 

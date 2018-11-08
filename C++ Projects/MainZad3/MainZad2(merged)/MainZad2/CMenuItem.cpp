@@ -32,7 +32,3 @@ string CMenuItem::sGetCommand()
 {
 	return s_command;
 }// string CMenuItem::sGetCommand()
-
-void CMenuItem::vSearch(string sCommand, string sPath)
-{
-}

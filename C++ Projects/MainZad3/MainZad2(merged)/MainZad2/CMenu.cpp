@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "CMenu.h"
 #include <iostream>
+#include <sstream>
 
 using namespace std;
 
@@ -25,7 +26,7 @@ int CMenu::iRun()
 {
 	string s_prompt;
 	while (true) {
-		cout << s_name << ": " << s_command << endl;
+		cout << s_name << TWO_DOTS << s_command << endl;
 		for (int i = 0; i < v_menu_items.size(); i++)
 			cout << v_menu_items[i]->sGetName() << BRACKET_OPEN << v_menu_items[i]->sGetCommand() << BRACKET_CLOSE << endl;
 		s_prompt.clear();
@@ -73,12 +74,12 @@ int CMenu::iRun()
 
 void CMenu::vAddItem(CMenuItem* cItem)
 {
-	CMenu *newMenu;
-	newMenu = dynamic_cast<CMenu*>(cItem);
-	if (newMenu)
+	CMenu *cNewMenu;
+	cNewMenu = dynamic_cast<CMenu*>(cItem);
+	if (cNewMenu)
 	{
-		newMenu->setParent(this);
-	}
+		cNewMenu->setParent(this);
+	}// if (cNewMenu)
 	bool bExist = false;
 	for (int i = 0; i < v_menu_items.size(); i++)
 		if (v_menu_items[i] == cItem || v_menu_items[i]->sGetCommand() == cItem->sGetCommand())
@@ -88,18 +89,17 @@ void CMenu::vAddItem(CMenuItem* cItem)
 
 CMenu* CMenu::getParent() 
 {
-	return parent;
+	return cParent;
 }// CMenu* CMenu::getParent() 
 
-void CMenu::setParent(CMenu *par)
+void CMenu::setParent(CMenu *cPar)
 {
-	this->parent = par;
+	this->cParent = cPar;
 }// void CMenu::setParent(CMenu *par)
 
 CMenu* CMenu::findMain()
 {
-	CMenu *main = parent;
-
+	CMenu *main = cParent;
 	if (!(main == NULL))
 	{
 		while ((*main).getParent())
@@ -107,11 +107,7 @@ CMenu* CMenu::findMain()
 			main = (*main).getParent();
 		}// while ((*main).getParent())
 	}// if (main)
-	else
-	{
-		main = this;
-	}//jesli parent jest nullem na wejsciu to zmajdujemy sie w mainie
-
+	else { main = this; }
 	return main;
 }// CMenu* CMenu::findMain()
 
@@ -142,7 +138,7 @@ void CMenu::vSearch(string sCommand, string sPath)
 	{
 		cout << sPath + s_command << endl;
 	}// if (sCommand == s_command)
-	sPath.append(s_command + "->");
+	sPath.append(s_command + POINTER);
 
 	for (int i = 0; i < v_menu_items.size(); i++)
 	{
@@ -150,3 +146,24 @@ void CMenu::vSearch(string sCommand, string sPath)
 
 	}// for (int i = 0; i < v_menu_items.size(); i++)
 }// void CMenu::vSearch(string sCommand, string sPath)
+
+string CMenu::parseToString()
+{
+	string sParsed = EMPTY_STRING;
+	sParsed += BRACKET_OPEN;
+	sParsed += CHAR_TO_PARSE;
+	sParsed += s_name;
+	sParsed += COMMA_TO_PARSE;
+	sParsed += s_command;
+	sParsed += END_TO_PARSE;
+	for (int i = 0; i < v_menu_items.size(); i++)
+	{
+		sParsed += v_menu_items.at(i)->parseToString();
+		if (v_menu_items.size() - 1 != i)
+		{
+			sParsed += COMMA2_TO_PARSE;
+		}// if (v_menu_items.size() - 1 != i)
+	}// for (int i = 0; i < v_menu_items.size(); i++)
+	sParsed += BRACKET_CLOSE;
+	return sParsed;
+}// string CMenu::parseToString()

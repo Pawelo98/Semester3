@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "CCommand.h"
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -15,10 +16,6 @@ CCommand::~CCommand()
 
 void CCommand::RunCommand()
 {
+	string sHelp = DEFAULT_STRING;
 	cout << DEFAULT_STRING << endl;
 }// void CCommand::RunCommand()
-
-void CCommand::vHelpCommand()
-{
-	cout << EMPTY_QUOTE << endl;
-}

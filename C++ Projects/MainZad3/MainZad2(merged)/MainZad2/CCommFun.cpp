@@ -26,4 +26,4 @@ void CCommFun::RunCommand()
 void CCommFun::vHelpCommand()
 {
 	cout << sHelp << endl;
-}
+}// void CCommFun::vHelpCommand()
