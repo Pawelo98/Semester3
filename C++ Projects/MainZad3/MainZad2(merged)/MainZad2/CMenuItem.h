@@ -16,6 +16,7 @@ public:
 	virtual  ~CMenuItem();
 
 	virtual void vSearch(string sCommand, string sPath) {};
+	virtual void vShowLevels(int iNeed) {};
 	virtual int iRun() = 0;
 	virtual int iHelp() = 0;
 	virtual string parseToString() { return string(); };

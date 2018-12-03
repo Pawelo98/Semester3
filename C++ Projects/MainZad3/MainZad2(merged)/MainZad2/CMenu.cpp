@@ -143,7 +143,6 @@ void CMenu::vSearch(string sCommand, string sPath)
 	for (int i = 0; i < v_menu_items.size(); i++)
 	{
 		v_menu_items.at(i)->vSearch(sCommand, sPath);
-
 	}// for (int i = 0; i < v_menu_items.size(); i++)
 }// void CMenu::vSearch(string sCommand, string sPath)
 
@@ -167,3 +166,18 @@ string CMenu::parseToString()
 	sParsed += BRACKET_CLOSE;
 	return sParsed;
 }// string CMenu::parseToString()
+
+void CMenu::vShowLevels(int iNeed)
+{
+	if(root) cout << s_name << endl;
+	for (int i = 0; i < v_menu_items.size(); i++)
+	{
+		cout << v_menu_items.at(i)->sGetName() + "  ";
+	}// for (int i = 0; i < v_menu_items.size(); i++)
+	if(iNeed==0) cout << endl;
+	for (int j = 0; j < v_menu_items.size(); j++)
+	{
+		if(j==0) iNeed = v_menu_items.size();
+		v_menu_items.at(j)->vShowLevels(iNeed--);
+	}
+}// void CMenu::vShowLevels()

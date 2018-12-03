@@ -19,8 +19,8 @@
 #define MENU1_GET "menu1"
 #define MENU2_COMMAND "Podmenu2"
 #define MENU2_GET "menu2"
-#define EXPECTED "expected: "
-#define FOUND " found: "
+#define EXPECTED "in return got: "
+#define FOUND " was looking for: "
 #define CHAR_TO_PARSE '\''
 #define COMMA_TO_PARSE "','"
 #define END_TO_PARSE "';"
@@ -47,11 +47,12 @@ public:
 	void setParent(CMenu *cPar);
 	CMenu* findMain();
 	void vSearch(string sCommand, string sPath);
-	void vSearch(CMenu*);
+	void vSearch(CMenu* cMenuObject);
 	void vSetRoot() { root = true; }
 	void vAddItem(CMenuItem* cItem);
 	CMenuItem* GetItem(int iIndex);
 	void vDeleteItem(int iIndex);
 	string parseToString();
+	void vShowLevels(int iNeed);
 };
 

@@ -11,7 +11,7 @@ CMenuToString::~CMenuToString()
 {
 }
 
-string CMenuToString::parseToString(CMenu * menu)
+string CMenuToString::parseToString(CMenu* menu)
 {
 	return string();
 }// string CMenuToString::parseToString(CMenu * menu)
