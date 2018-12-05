@@ -7,9 +7,29 @@ using namespace std;
 CGeneticAlgorithm::CGeneticAlgorithm(int iPopSize, double dMutProb, double dCrossProb, int iIters)
 {
 	d_mutation_chance = dMutProb;
+	if (dMutProb < 0 || dMutProb>1)
+	{
+		cout << MUTATION_ERROR << MUT_PROB << endl;
+		d_mutation_chance = MUT_PROB;
+	}
 	d_crossover_chance = dCrossProb;
+	if (dCrossProb < 0 || dCrossProb>1)
+	{
+		cout << CROSS_ERROR << CROSS_PROB << endl;
+		d_crossover_chance = CROSS_PROB;
+	}
 	i_population_size = iPopSize;
+	if (iPopSize <= 0)
+	{
+		cout << POPSIZE_ERROR << POP_SIZE << endl;
+		i_population_size = POP_SIZE;
+	}
 	i_iteration_number = iIters;
+	if (iIters <=0)
+	{
+		cout << ITERS_ERROR << ITERS_NUMBER << endl;
+		i_iteration_number = ITERS_NUMBER;
+	}
 	random_device rd;
 	mt19937 generator(rd());
 	gen = generator;

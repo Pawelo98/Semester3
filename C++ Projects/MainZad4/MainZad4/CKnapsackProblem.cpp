@@ -4,6 +4,11 @@
 CKnapsackProblem::CKnapsackProblem(double dSize)
 {
 	d_size = dSize;
+	if (dSize <= 0)
+	{
+		cout << KNAPSACK_ERROR << KNAPSACK_SIZE << endl;
+		d_size = KNAPSACK_SIZE;
+	} // if (dSize <= 0)
 } // CKnapsackProblem::CKnapsackProblem(double dSize)
 
 double CKnapsackProblem::dGetSize()

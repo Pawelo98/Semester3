@@ -3,6 +3,14 @@
 #include <random>
 #include "CIndividual.h"
 #include "CKnapsackProblem.h"
+#define POP_SIZE 20
+#define MUT_PROB 0.1
+#define CROSS_PROB 0.6
+#define ITERS_NUMBER 5000
+#define MUTATION_ERROR "Wrong mutation probability, set to default = "
+#define POPSIZE_ERROR "Wrong popsize, set to default = "
+#define CROSS_ERROR "Wrong crossover probability, set to default = "
+#define ITERS_ERROR "Wrong iterations number, set to default = "
 
 using namespace std;
 

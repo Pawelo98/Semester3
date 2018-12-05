@@ -1,3 +1,15 @@
-﻿  MainZad4.cpp
-c:\users\pawlik\desktop\semester3-master\c++ projects\mainzad4\mainzad4\mainzad4.cpp(26): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+﻿  CGeneticAlgorithm.cpp
+c:\users\pawlik\desktop\semester3-master\c++ projects\mainzad4\mainzad4\cgeneticalgorithm.cpp(25): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+c:\users\pawlik\desktop\semester3-master\c++ projects\mainzad4\mainzad4\cgeneticalgorithm.cpp(36): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+c:\users\pawlik\desktop\semester3-master\c++ projects\mainzad4\mainzad4\cgeneticalgorithm.cpp(66): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+c:\users\pawlik\desktop\semester3-master\c++ projects\mainzad4\mainzad4\cgeneticalgorithm.cpp(79): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+  CIndividual.cpp
+c:\users\pawlik\desktop\semester3-master\c++ projects\mainzad4\mainzad4\cindividual.cpp(31): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+c:\users\pawlik\desktop\semester3-master\c++ projects\mainzad4\mainzad4\cindividual.cpp(57): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+  CKnapsackProblem.cpp
+c:\users\pawlik\desktop\semester3-master\c++ projects\mainzad4\mainzad4\cknapsackproblem.cpp(27): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+c:\users\pawlik\desktop\semester3-master\c++ projects\mainzad4\mainzad4\cknapsackproblem.cpp(40): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+  MainZad4.cpp
+c:\users\pawlik\desktop\semester3-master\c++ projects\mainzad4\mainzad4\mainzad4.cpp(33): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+  Generowanie kodu...
   MainZad4.vcxproj -> C:\Users\Pawlik\Desktop\Semester3-master\C++ Projects\MainZad4\Debug\MainZad4.exe
