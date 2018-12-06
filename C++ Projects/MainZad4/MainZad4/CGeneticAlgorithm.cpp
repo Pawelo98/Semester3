@@ -7,29 +7,29 @@ using namespace std;
 CGeneticAlgorithm::CGeneticAlgorithm(int iPopSize, double dMutProb, double dCrossProb, int iIters)
 {
 	d_mutation_chance = dMutProb;
+	d_crossover_chance = dCrossProb;
+	i_population_size = iPopSize;
+	i_iteration_number = iIters;
 	if (dMutProb < 0 || dMutProb>1)
 	{
-		cout << MUTATION_ERROR << MUT_PROB << endl;
-		d_mutation_chance = MUT_PROB;
-	}
-	d_crossover_chance = dCrossProb;
+		cout << MUTATION_ERROR << MUT_DEFAULT << endl;
+		d_mutation_chance = MUT_DEFAULT;
+	} // if (dMutProb < 0 || dMutProb>1)
 	if (dCrossProb < 0 || dCrossProb>1)
 	{
-		cout << CROSS_ERROR << CROSS_PROB << endl;
-		d_crossover_chance = CROSS_PROB;
-	}
-	i_population_size = iPopSize;
+		cout << CROSS_ERROR << CROSS_DEFAULT << endl;
+		d_crossover_chance = CROSS_DEFAULT;
+	} // if (dCrossProb < 0 || dCrossProb>1)
 	if (iPopSize <= 0)
 	{
-		cout << POPSIZE_ERROR << POP_SIZE << endl;
-		i_population_size = POP_SIZE;
-	}
-	i_iteration_number = iIters;
+		cout << POPSIZE_ERROR << POP_DEFAULT << endl;
+		i_population_size = POP_DEFAULT;
+	} // if (iPopSize <= 0)
 	if (iIters <=0)
 	{
-		cout << ITERS_ERROR << ITERS_NUMBER << endl;
-		i_iteration_number = ITERS_NUMBER;
-	}
+		cout << ITERS_ERROR << ITERS_DEFAULT << endl;
+		i_iteration_number = ITERS_DEFAULT;
+	} // if (iIters <=0)
 	random_device rd;
 	mt19937 generator(rd());
 	gen = generator;
@@ -69,12 +69,15 @@ void CGeneticAlgorithm::vRun(CKnapsackProblem *cKnapsackProblem)
 			uniform_int_distribution<> distribution2(0, v_population.size() - 1);
 			index1 = distribution2(gen);
 			index2 = distribution2(gen);
+
 			if (v_population.at(index1).dFitness(cKnapsackProblem) > v_population.at(index2).dFitness(cKnapsackProblem)) toCross1 = v_population.at(index1);
 			else toCross1 = v_population.at(index2);
 			index1 = distribution2(gen);
 			index2 = distribution2(gen);
+
 			if (v_population.at(index1).dFitness(cKnapsackProblem) > v_population.at(index2).dFitness(cKnapsackProblem)) toCross2 = v_population.at(index1);
 			else toCross2 = v_population.at(index2);
+
 			vCurrentPopulation = toCross1.crossGenotypes(&toCross2);
 			vNewPopulation.push_back(vCurrentPopulation.at(0));
 			vNewPopulation.push_back(vCurrentPopulation.at(1));

@@ -7,6 +7,10 @@
 #define MUT_PROB 0.1
 #define CROSS_PROB 0.6
 #define ITERS_NUMBER 5000
+#define POP_DEFAULT 20
+#define MUT_DEFAULT 0.1
+#define CROSS_DEFAULT 0.6
+#define ITERS_DEFAULT 5000
 #define MUTATION_ERROR "Wrong mutation probability, set to default = "
 #define POPSIZE_ERROR "Wrong popsize, set to default = "
 #define CROSS_ERROR "Wrong crossover probability, set to default = "

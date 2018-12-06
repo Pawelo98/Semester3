@@ -43,10 +43,19 @@ vector<CIndividual> CIndividual::crossGenotypes(CIndividual *cIndividual)
 {
 	uniform_int_distribution<> distribution(1, v_genotype.size() - 1);
 	int iCutPlace = distribution(gen);
+	int iCutPlace2 = distribution(gen);
 
-	vector<CIndividual> vChilds;
+	vector <CIndividual> vChilds;
 	vector <int> vChild1;
 	vector <int> vChild2;
+
+	if (iCutPlace > iCutPlace2)
+	{
+		int temp;
+		temp = iCutPlace;
+		iCutPlace = iCutPlace2;
+		iCutPlace2 = temp;
+	} // if (iCutPlace > iCutPlace2)
 
 	for (int i = 0; i < iCutPlace; i++)
 	{
@@ -54,11 +63,18 @@ vector<CIndividual> CIndividual::crossGenotypes(CIndividual *cIndividual)
 		vChild2.push_back((*cIndividual).v_genotype.at(i));
 	} // for (int i = 0; i < iCutPlace; i++)
 
-	for (int j = iCutPlace; j < v_genotype.size(); j++)
+	for (int j = iCutPlace; j < iCutPlace2; j++)
 	{
 		vChild2.push_back(v_genotype.at(j));
 		vChild1.push_back((*cIndividual).v_genotype.at(j));
 	} // for (int j = iCutPlace; j < v_genotype.size(); j++)
+
+	for (int g = iCutPlace2; g < v_genotype.size(); g++)
+	{
+		vChild1.push_back(v_genotype.at(g));
+		vChild2.push_back((*cIndividual).v_genotype.at(g));
+	} // for (int j = iCutPlace; j < v_genotype.size(); j++)
+
 	this->vSetGenotype(vChild1);
 	(*cIndividual).vSetGenotype(vChild2);
 
