@@ -1,0 +1,6 @@
+﻿  CTime.cpp
+c:\users\pawlik\desktop\semester3-master\c++ projects\listapoprawkowa\listapoprawkowa\ctime.cpp(45): warning C4244: "inicjowanie": konwersja z "double" do "int", możliwa utrata danych
+  ListaPoprawkowa.cpp
+  TimeStamp.cpp
+  Generowanie kodu...
+  ListaPoprawkowa.vcxproj -> C:\Users\Pawlik\Desktop\Semester3-master\C++ Projects\ListaPoprawkowa\Debug\ListaPoprawkowa.exe

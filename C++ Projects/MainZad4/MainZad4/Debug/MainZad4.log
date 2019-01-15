@@ -1,4 +1,9 @@
-﻿  CIndividual.cpp
-c:\users\pawlik\desktop\semester3-master\c++ projects\mainzad4\mainzad4\cindividual.cpp(31): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
-c:\users\pawlik\desktop\semester3-master\c++ projects\mainzad4\mainzad4\cindividual.cpp(72): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+﻿  CGeneticAlgorithm.cpp
+c:\users\pawlik\desktop\semester3-master\c++ projects\mainzad4\mainzad4\cgeneticalgorithm.cpp(45): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+c:\users\pawlik\desktop\semester3-master\c++ projects\mainzad4\mainzad4\cgeneticalgorithm.cpp(56): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+c:\users\pawlik\desktop\semester3-master\c++ projects\mainzad4\mainzad4\cgeneticalgorithm.cpp(89): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+c:\users\pawlik\desktop\semester3-master\c++ projects\mainzad4\mainzad4\cgeneticalgorithm.cpp(102): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+  MainZad4.cpp
+c:\users\pawlik\desktop\semester3-master\c++ projects\mainzad4\mainzad4\mainzad4.cpp(24): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+  Generowanie kodu...
   MainZad4.vcxproj -> C:\Users\Pawlik\Desktop\Semester3-master\C++ Projects\MainZad4\Debug\MainZad4.exe
