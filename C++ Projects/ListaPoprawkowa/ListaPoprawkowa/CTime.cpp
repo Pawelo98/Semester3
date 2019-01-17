@@ -7,7 +7,7 @@ using namespace std;
 
 CTime::CTime(int iDay, int iMonth, int iYear)
 {
-	if (iYear < 0 || iMonth < 0 || iMonth > NUMBER_OF_MONTHS || iDay < 0 || iDay > DAYS_IN_MONTHS[iMonth - 1])
+	if (iYear < 0 || iMonth < 0 || iMonth > NUMBER_OF_MONTHS || iDay < 0 || ( iYear%4==0 && iMonth==2 && iDay > DAYS_IN_MONTHS[iMonth - 1]+1) || (!(iYear % 4 == 0 && iMonth == 2) && iDay > DAYS_IN_MONTHS[iMonth - 1]))
 	{
 		iYear = 1;
 		iMonth = 1;
@@ -46,16 +46,24 @@ string CTime::sDateToString()
 	int iDay = 0;
 	int iMonth = 1;
 	int iYear = 1;
-	for (int i = 1; iDays > DAYS_IN_A_YEAR; i++)
+	int i;
+	for (i = 1; iDays > DAYS_IN_A_YEAR; i++)
 	{
 		if ((i % LEAP4 == 0) && (!(i % LEAP100 == 0) || (i % LEAP400 == 0))) iDays -= (DAYS_IN_A_YEAR+1);
 		else iDays -= DAYS_IN_A_YEAR;
 		iYear++;
 	} // for (int i = 1; iDays >= DAYS_IN_A_YEAR; i++)
-	for (int j = 1; iDays > DAYS_IN_MONTHS[j-1]; j++)
+	int daysInMonth[12];
+	for (int p = 0; p < 12; p++)
 	{
-		iDays -= DAYS_IN_MONTHS[j - 1];
+		daysInMonth[p] = DAYS_IN_MONTHS[p];
+	}
+	for (int j = 1; iDays > daysInMonth[j-1]; j++)
+	{
+		if((i%4)==0 && j==2) iDays -= (DAYS_IN_MONTHS[j - 1]+1);
+		else iDays -= DAYS_IN_MONTHS[j - 1];
 		iMonth++;
+		if ((i % 4) == 0 && (j + 1) == 2) daysInMonth[j] = DAYS_IN_MONTHS[j] + 1;
 	} // for (int j = 1; iDays >= DAYS_IN_MONTHS[j-1]; j++)
 	iDay = iDays;
 	return to_string(iDay) + "." + to_string(iMonth) + "." + to_string(iYear);

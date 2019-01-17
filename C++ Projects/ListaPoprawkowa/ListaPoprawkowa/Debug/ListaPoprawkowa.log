@@ -1,6 +1,5 @@
-﻿  CTime.cpp
-c:\users\pawlik\desktop\semester3-master\c++ projects\listapoprawkowa\listapoprawkowa\ctime.cpp(45): warning C4244: "inicjowanie": konwersja z "double" do "int", możliwa utrata danych
-  ListaPoprawkowa.cpp
+﻿  ListaPoprawkowa.cpp
   TimeStamp.cpp
+c:\users\pawlik\desktop\semester3-master\c++ projects\listapoprawkowa\listapoprawkowa\timestamp.cpp(158): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
   Generowanie kodu...
   ListaPoprawkowa.vcxproj -> C:\Users\Pawlik\Desktop\Semester3-master\C++ Projects\ListaPoprawkowa\Debug\ListaPoprawkowa.exe

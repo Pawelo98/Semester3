@@ -13,6 +13,9 @@
 #define THREE_SIX_SIX 366
 #define HOURS_TO_DIVIDE 1032
 #define HOURS_TO_CONSTRUCTOR 7081.43
+#define TWO_NINE 29
+#define TWO 2
+#define FOUR 4
 
 using namespace std;
 

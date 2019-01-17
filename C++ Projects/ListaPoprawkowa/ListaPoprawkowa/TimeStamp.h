@@ -6,6 +6,8 @@
 #define DAYS_IN_MIN 0.00069444444
 #define HOURS_IN_DAY 24
 #define DAYS_IN_HOUR 0.04166666667
+#define EMPTY "  "
+#define DWUKROPEK ":"
 
 class TimeStamp : CTime
 {
@@ -16,6 +18,7 @@ public:
 
 	double dGetDays() { return d_days; };
 	string sDateToString();
+	string sFormat(string sToFormat);
 
 	TimeStamp operator-(double dDays);
 	TimeStamp operator+(double dDays);
